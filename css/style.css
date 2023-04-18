@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   background-color: green;
 }
@@ -10,4 +18,34 @@ p {
 
 .pr {
   color: red;
+}
+
+.header {
+  padding: 15px;
+}
+.header_inner {
+  display: flex;
+  max-width: 768px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+  height: 100%;
+}
+.logo img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.nav {
+  align-self: end;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+.nav ul li:not(:first-child) {
+  margin-left: 30px;
 }
