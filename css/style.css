@@ -45,7 +45,6 @@ p {
 .nav ul {
   display: flex;
   list-style: none;
-}
-.nav ul li:not(:first-child) {
-  margin-left: 30px;
+  justify-content: space-between;
+  gap: 30px;
 }
