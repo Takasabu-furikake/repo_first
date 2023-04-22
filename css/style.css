@@ -10,6 +10,7 @@
 
 h1 {
   background-color: green;
+  border-radius: 10px;
 }
 
 p {
@@ -47,4 +48,9 @@ p {
   list-style: none;
   justify-content: space-between;
   gap: 30px;
+}
+
+.wrapper {
+  max-width: 768px;
+  margin: 0 auto;
 }
