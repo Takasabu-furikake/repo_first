@@ -29,15 +29,12 @@ p {
   max-width: 768px;
   margin: 0 auto;
   justify-content: space-between;
-  align-items: center;
 }
 .logo {
   width: 150px;
-  height: 100%;
 }
-.logo img {
-  width: 100%;
-  vertical-align: bottom;
+#eye {
+  transition: cx 0.125s ease-out, cy 0.125s ease-out;
 }
 
 .nav {
