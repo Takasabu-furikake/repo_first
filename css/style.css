@@ -51,3 +51,32 @@ p {
   max-width: 768px;
   margin: 0 auto;
 }
+
+#leftPupil,
+#rightPupil {
+  transition: cx 0.125s ease-out, cy 0.125s ease-out;
+}
+#form {
+  border: solid 1px #ddd;
+  border-radius: 0.5em;
+  display: flex;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 24px;
+  flex-direction: column;
+}
+#form input {
+  padding: 8px;
+  /* border: 10px solid; */
+  margin-bottom: 12px;
+}
+#form input[type="button"] {
+  border: none;
+  background-color: #4eb8dd;
+  color: #ffffff;
+}
+#form label {
+  margin-bottom: 2px;
+}
