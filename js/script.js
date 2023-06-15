@@ -1,9 +1,12 @@
 (() => {
   const eyeEl = document.getElementById("eye");
-  const eyePos = eyeEl.getBoundingClientRect();
-
   const cx = +eyeEl.getAttribute("cx");
   const cy = +eyeEl.getAttribute("cy");
+  let eyePos = eyeEl.getBoundingClientRect();
+
+  window.addEventListener("resize", () => {
+    eyePos = eyeEl.getBoundingClientRect();
+  });
 
   let mouseTimer;
   addEventListener("mousemove", e => {

@@ -3,22 +3,29 @@
   const rightPupilEl = document.getElementById("rightPupil");
   const leftEyelidEL = document.getElementById("leftEyelid");
   const rightEyelidEL = document.getElementById("rightEyelid");
-  // const leftEyeEl = document.getElementById("leftEye");
-  // const rightEyeEl = document.getElementById("rightEye");
 
   const email = document.getElementById("email");
   const emailStyle = getComputedStyle(email);
   const password = document.getElementById("password");
 
-  const rightEyePos = rightPupilEl.getBoundingClientRect();
-  const rightEyeCx = rightEyePos.x + rightEyePos.width / 2;
-  const rightEyeCy = rightEyePos.y + rightEyePos.height / 2;
-  const leftEyePos = leftPupilEl.getBoundingClientRect();
-  const leftEyeCx = leftEyePos.x + leftEyePos.width / 2;
-  const leftEyeCy = leftEyePos.y + leftEyePos.height / 2;
-
   const cx = +leftPupilEl.getAttribute("cx");
   const cy = +leftPupilEl.getAttribute("cy");
+
+  let rightEyePos = rightPupilEl.getBoundingClientRect();
+  let rightEyeCx = rightEyePos.x + rightEyePos.width / 2;
+  let rightEyeCy = rightEyePos.y + rightEyePos.height / 2;
+  let leftEyePos = leftPupilEl.getBoundingClientRect();
+  let leftEyeCx = leftEyePos.x + leftEyePos.width / 2;
+  let leftEyeCy = leftEyePos.y + leftEyePos.height / 2;
+
+  window.addEventListener("resize", () => {
+    rightEyePos = rightPupilEl.getBoundingClientRect();
+    rightEyeCx = rightEyePos.x + rightEyePos.width / 2;
+    rightEyeCy = rightEyePos.y + rightEyePos.height / 2;
+    leftEyePos = leftPupilEl.getBoundingClientRect();
+    leftEyeCx = leftEyePos.x + leftEyePos.width / 2;
+    leftEyeCy = leftEyePos.y + leftEyePos.height / 2;
+  });
 
   email.addEventListener("input", getCoordinates);
   email.addEventListener("focus", getCoordinates);
