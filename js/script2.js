@@ -27,8 +27,8 @@
     leftEyeCy = leftEyePos.y + leftEyePos.height / 2;
   });
 
-  email.addEventListener("input", getCoordinates);
-  email.addEventListener("focus", getCoordinates);
+  email.addEventListener("input", moveEyes);
+  email.addEventListener("focus", moveEyes);
   email.addEventListener("blur", () => {
     rightPupilEl.setAttribute("cx", cx);
     rightPupilEl.setAttribute("cy", cy);
@@ -52,7 +52,7 @@
     leftPupilEl.setAttribute("stroke-opacity", 1);
   });
 
-  function getCoordinates(e) {
+  function moveEyes(e) {
     const span = document.createElement("span");
     const div = document.createElement("div");
 
